@@ -8,14 +8,16 @@ explanation of the concepts and principles of how it works. To demonstrate your 
 three data sources compiled with data from QFES. 
 
 #### These are: 
-● “Fire_Stations.csv” contains the information about 
-the fire stations, 
-● “Station_Locations.xml” contains the location coordinates for each fire station
-● “Station_Regions.csv” 
-contains a list of regions Important Note:​ 
+- “Fire_Stations.csv” contains the information about the fire stations, 
+- “Station_Locations.xml” contains the location coordinates for each fire station
+- “Station_Regions.csv” contains a list of regions 
+
+##### Important Note:​ 
 For ease of demonstration, your code must be self-contained. In addition to using 
 Standards-based HTML and Python, PETL, and Parser are the only additional frameworks you should need. If you use others they 
-must be provided and must not require installation. Problem statement: 
+must be provided and must not require installation. 
+
+### Problem statement: 
 
 1. The Fire_Stations.csv file contains non-printable 
 Unicode characters, in order to perform other cleaning tasks and merging of data you’ll first need to clean these characters 
@@ -42,10 +44,19 @@ fields as shown in Table 1 - Field Mapping.
 | Lat | Station_Locations.Lat | 
 | Lon | Station_Locations.Long | 
 
-Table 1 - Field Mapping
+            Table 1 - Field Mapping
 
 ### Steps to execute:
 
-`docker build -t ml_task .`
-`docker run --rm ml_task`
+- Navigate to project directory.
+- change the VOLUME directory in Dockerfile according to your local path.
+- Build necessary images from Docker.
+
+    `docker build -t ml_task .`
+- Run the image to execute the ml task.
+
+    `docker run --rm ml_task`
+
+- The result will print in the console for now, it's possible to store it if required.
+
 
